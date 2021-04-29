@@ -8,10 +8,13 @@ def mostrarSiglas(cadena):
 
 
 def primera_palabra_mayuscula(cadena):
-    palabras = cadena.title()  # guardo en la variable  la palabra ya con sus mayusculas en la primera letra      
-    return palabras
+    palabras = cadena.split(" ")
+    frase_final = ""
+    for palabra in palabras:  # recorro la palabra separada  
+        frase_final  += palabra.capitalize() + " "  # agarro la palabra separado y la primera letra la pongo en mayuscula      
+    return frase_final
 
-
+print((primera_palabra_mayuscula("republica argentina")))
 
 def palabras_iniciales(cadena, letra):
     palabras = cadena.split(" ")

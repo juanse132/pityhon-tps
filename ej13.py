@@ -1,5 +1,5 @@
-palabra = str(input("ingrese una palabra: "))
-otra_palabra = str(input("ingrese la forma capitalizada de la anterior palabra: "))
+palabra = str(input("Ingrese una palabra: "))
+otra_palabra = str(input("Ingrese la forma capitalizada de la anterior palabra: "))
 def palabra_capital(palabra,otra_palabra):
     if palabra == palabra.lower():  # pregunto si esta en minuscula
         if otra_palabra == otra_palabra.upper():  # pregunto si esta en mayuscula

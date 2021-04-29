@@ -1,7 +1,7 @@
-cadena = str(input("ingrese una cadena:"))
-long_palabra = int(input("ingrese la maxima cantidad de letras por palabra:"))
-costo_palabra_corta = int(input("ingrese el costo de las palabras cortas: $"))
-costo_palabra_larga = int(input("ingrese el costo de las palabras largas: $"))
+cadena = str(input("Ingrese una cadena:"))
+long_palabra = int(input("Ingrese la maxima cantidad de letras por palabra:"))
+costo_palabra_corta = int(input("Ingrese el costo de las palabras cortas: $"))
+costo_palabra_larga = int(input("Ingrese el costo de las palabras largas: $"))
 
 def arroba_letras(cadena, long_palabra, costo_palabra_corta, costo_palabra_larga):
     palabras = cadena.split(" ")

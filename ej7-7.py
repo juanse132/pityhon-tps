@@ -5,7 +5,7 @@ dia2 = int(input("Ingrese el dia2 "))
 mes2 = int(input("Ingrese el mes2 "))
 year2 = int(input("Ingrese el año2 "))
 
-def dos_fechas(dia,mes,year,dia2,mes2,year2):
+def dos_fechas(dia, mes, year, dia2, mes2, year2):
     from datetime import date
     fecha = date(year, mes , dia)#cargo la prierma fecha
     otra_fecha = date(year2 , mes2 , dia2)#cargo la segunda fecha

@@ -1,4 +1,4 @@
-cadena = str(input("ingrese una cadena para contar vocales: "))
+cadena = str(input("Ingrese una cadena para contar vocales: "))
 
 def contar_vocales(cadena):
 	cont = 0

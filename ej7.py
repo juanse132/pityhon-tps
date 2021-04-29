@@ -1,6 +1,9 @@
 dia = int(input("Ingrese el dia "))
 mes = int(input("Ingrese el mes "))
 year = int(input("Ingrese el año "))
+dia2 = int(input("Ingrese el dia2 "))
+mes2 = int(input("Ingrese el mes2 "))
+year2 = int(input("Ingrese el año2 "))
 dias_bisiesto = 366
 dias_no_bisiesto = 365
 
@@ -47,10 +50,10 @@ def dias_mes(dia, mes, year):
         dias_restantes = total - dia  # calculo los dias restantes
         return dias_restantes
     else:
-        print("fecha invalida")
+        print("Fecha invalida")
         return False
 
-def dias_year(dia, mes, year):
+def dias_faltantes_year(dia, mes, year):
     if validar_fecha(dia, mes, year):  # valido la fecha
         dias_totales = 0
         dias_anteriores = 0    
@@ -62,7 +65,7 @@ def dias_year(dia, mes, year):
             dias_anteriores += cantidad_dias(i)  # suma los returns de los diferesnts dias a la var
         else:
             resultado = dias_totales - dias_anteriores - dia  # calculo los dias que faltan hasta fin de año
-            print("quedan", resultado, "para que finalize el año")
+            print("Quedan", resultado, "para que finalize el año")
             return resultado
     else:
         return False
@@ -74,8 +77,36 @@ def dias_fecha(dia, mes, year):
             dias_anteriores += cantidad_dias(i)  # suma los returns de los diferesnts dias a la var
         else:
             resultado = dias_anteriores + dia  # calculo los dias hasta la fecha
-            print("pasaron", resultado, "dias hasta la fecha")
+            print("Pasaron", resultado, "dias hasta la fecha")
             return resultado
     else:
         return False
+
+
+def diferencia_years(dia, mes, year, dia2, mes2, year2):
+    years = year2 - year  # saco cuantos years hay de diferencia
+    anio = 0
+    meses = 0
+    dias = 0 
+    if validar_fecha(dia, mes, year) or validar_fecha(dia2, mes2, year2):  # valido ambas fechas
+        diferencia_dias = dias_faltantes_year(dia, mes, year) + dias_fecha(dia2, mes2, year2)  # sumo los dias entre las fechas dadas
+        for i in range(1,years):
+            diferencia_dias += 365  # le sumo a diferencia_dias 365 que es el promedio que hay de dias en los years transcurridos
+        while diferencia_dias != 0:
+            if diferencia_dias - 365 >= 0:  # saco los years que hay en esa diferencia_dias
+                diferencia_dias = diferencia_dias - 365
+                anio = anio + 1
+            elif diferencia_dias - 30 >= 0:  # saco los meses que hay en esa diferencia_dias
+                diferencia_dias = diferencia_dias - 30
+                meses = meses + 1
+            elif diferencia_dias - 1 >= 0:  # saco los dias que hay en esa diferencia_dias
+                diferencia_dias = diferencia_dias - 1
+                dias = dias + 1
+        
+        return f"""El tiempo transcurrido entre las fechas es:  
+{anio} years, {meses} meses y {dias} dias """
+
+print(diferencia_years(dia, mes, year, dia2, mes2, year2))
+
+
 

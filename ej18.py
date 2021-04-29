@@ -11,11 +11,10 @@ def vuelta_listas(lista_inicial,lista_final):
 
 def lista_modificada(lista_inicial):
 
-    lista_inicial = lista_inicial[4::-1]  
-    """ 
-    pongo en la lista inicial desde la posicion final de la misma hasta 
-    el inicio dando saltos de -1 
-    """
+    lista_inicial = lista_inicial[4::-1]  # pongo en la lista inicial desde la posicion final de la misma hasta el inicio dando saltos de -1   
+
     return lista_inicial
 
+
 print(lista_modificada(lista_inicial))
+
