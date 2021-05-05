@@ -4,6 +4,10 @@ costo_palabra_corta = int(input("Ingrese el costo de las palabras cortas: $"))
 costo_palabra_larga = int(input("Ingrese el costo de las palabras largas: $"))
 
 def arroba_letras(cadena, long_palabra, costo_palabra_corta, costo_palabra_larga):
+    """
+    Devuelvo un telegrama y si hay un punto lo reemplazo por un STOP y si en la cadena
+    una palabra tiene mas del maximo de letras pre-elegidas,entonces se corta hasta ese maximo y luego se le pone un @ 
+    """
     palabras = cadena.split(" ")
     frase_final = ""
     costo_total = 0
@@ -23,5 +27,6 @@ def arroba_letras(cadena, long_palabra, costo_palabra_corta, costo_palabra_larga
     return f"""El telegrama final es: 
 {frase_final} 
 utilizando {long_palabra} letras maximas por palabra a un costo de ${costo_total} """
+
 
 print(arroba_letras(cadena, long_palabra, costo_palabra_corta, costo_palabra_larga))            

@@ -2,6 +2,9 @@ password = str(input("Ingrese un password: "))
 password_correcto = "password123"
 
 def password(password):
+    """
+    Establezco una contraseña inventada y la voy comparando con la que escribe el usuario 
+    """
     import time
     cont = 3
     tiempo_espera = 1

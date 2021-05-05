@@ -1,20 +1,25 @@
-lista_inicial = ["Di", "buen", "dia", "a", "papa"]
-lista_final = ["", "", "", "", ""]
+frase_inicial = str(input("ingrese una frase para que luego sea invertida: "))
+lista_inicial = frase_inicial.split(" ")
 
-def vuelta_listas(lista_inicial,lista_final):
-    cont = 0
+def vuelta_listas(lista_inicial):
+    """
+    Devuelvo una lista dada vuelta utilizando una lista auxiliar 
+    """
+    lista_final = [""]
     for palabra  in lista_inicial[::-1]:  # recorro la lista de izquierda a derecha
-        lista_final[cont] += palabra  # concateno lo que vale la palabra a la posicion de la lista final
-        cont += 1
-    return lista_final
+        lista_final += palabra + " "  # concateno lo que vale la palabra a la posicion de la lista final
+    return "".join(lista_final)
+
+
+print(vuelta_listas(lista_inicial))
 
 
 def lista_modificada(lista_inicial):
-
+    """
+    Devuelvo una lista dada vuelta pero en una linea
+    """
     lista_inicial = lista_inicial[4::-1]  # pongo en la lista inicial desde la posicion final de la misma hasta el inicio dando saltos de -1   
 
     return lista_inicial
 
-
-print(lista_modificada(lista_inicial))
 

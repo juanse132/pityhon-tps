@@ -4,10 +4,13 @@ year = int(input("Ingrese el año "))
 dia2 = int(input("Ingrese el dia2 "))
 mes2 = int(input("Ingrese el mes2 "))
 year2 = int(input("Ingrese el año2 "))
-dias_bisiesto = 366
-dias_no_bisiesto = 365
+Dias_bisiesto = 366
+Dias_no_bisiesto = 365
 
 def bisiesto(year):
+    """
+    Saco si un año es bisiesto o no 
+    """
     if year > 0:
         if (year % 400 == 0 or year % 100 == 0 or year %4 == 0):
             return True
@@ -18,7 +21,11 @@ def bisiesto(year):
     else:
         return False
 
+
 def cantidad_dias(mes):
+    """
+    saco la cantidad de dias que tiene un mes  
+    """
     if  mes in (1, 3, 5, 7, 8, 10, 12 ): 
         return 31
         # En el primer if comparo el input con los meses que tienen 31
@@ -31,7 +38,11 @@ def cantidad_dias(mes):
     else: 
         return 30
 
+
 def validar_fecha(dia, mes, year):
+    """
+    Valido una fecha 
+    """
     total = cantidad_dias(mes)
     if 0 <= dia <= total:  # En el primer if comparo valido los dias
         if 0 <= mes <= 12:  # En el segundo if valido los meses
@@ -44,7 +55,11 @@ def validar_fecha(dia, mes, year):
     else:
         return False
 
+
 def dias_mes(dia, mes, year):
+    """
+    Saco la cantidad de dias que faltan hasta fin de ese mes 
+    """
     if validar_fecha(dia, mes, year):  # valido la fecha
         total = cantidad_dias(mes)  # guardo en la var el return de lo que vale mes
         dias_restantes = total - dia  # calculo los dias restantes
@@ -53,7 +68,11 @@ def dias_mes(dia, mes, year):
         print("Fecha invalida")
         return False
 
+
 def dias_faltantes_year(dia, mes, year):
+    """
+    Saco la cantidad de dias que faltan hasta fin de ese año
+    """
     if validar_fecha(dia, mes, year):  # valido la fecha
         dias_totales = 0
         dias_anteriores = 0    
@@ -70,7 +89,11 @@ def dias_faltantes_year(dia, mes, year):
     else:
         return False
 
+
 def dias_fecha(dia, mes, year):
+    """
+    Saco la cantidad de dias (en el mismo año) que transcurrieron hasta la fecha que ingresa el usuario 
+    """
     if validar_fecha(dia, mes, year):  # valido la fecha
         dias_anteriores = 0    
         for i in range(1, mes):  # recorro desde 1 hasta el nro que ingreso la persona de mes    
@@ -84,6 +107,9 @@ def dias_fecha(dia, mes, year):
 
 
 def diferencia_years(dia, mes, year, dia2, mes2, year2):
+    """
+    Calculo la diferencia en dias,mes y años que hay entre 2 fechas 
+    """
     years = year2 - year  # saco cuantos years hay de diferencia
     anio = 0
     meses = 0
@@ -106,7 +132,5 @@ def diferencia_years(dia, mes, year, dia2, mes2, year2):
         return f"""El tiempo transcurrido entre las fechas es:  
 {anio} years, {meses} meses y {dias} dias """
 
+
 print(diferencia_years(dia, mes, year, dia2, mes2, year2))
-
-
-

@@ -1,5 +1,6 @@
-print("Bienvenido al juego de Mastermind")
 import time
+import random
+print("Bienvenido al juego de Mastermind")
 time.sleep(1.5)
 print("Usted debera adiviniar un numero de 4 cifras secreto ya creado")
 time.sleep(2)
@@ -16,10 +17,9 @@ numeroAleatorio = []
 aciertos = 0 
 coincidencias = 0
 intentos = 0
-import random
 
 numeroUsuario = str(input("Ingrese el numero que cree que es correcto "))
-if  0 <= len(numeroUsuario) <= 3:
+if  0 <= len(numeroUsuario) <= 4:
     for i in range(0, 4):
         numeroAleatorio.append(random.randrange(0, 9)) # genero un numero ramdom
     while numeroAleatorio[0] in (numeroAleatorio[1], numeroAleatorio[2], numeroAleatorio[3]):  # verifico que sea distinto el primero de todos
@@ -46,5 +46,3 @@ if  0 <= len(numeroUsuario) <= 3:
     print("Es el mismo numero que el secreto y ganaste en:", intentos, "intentos")
 else:
     print("Numero invalido")
-    
-
