@@ -32,7 +32,7 @@ if  0 <= len(numeroUsuario) <= 4:
     numeroAleatorio = [str(item) for item in numeroAleatorio]  # agarro de item en item y lo transformo a str
     numeroAleatorio = "".join(numeroAleatorio)  # junto los 4 items de la lista en uno
 
-    while numeroUsuario != numeroAleatorio:  # repito esto hasta que el usuario escriba bien el numero secreto
+    while numeroUsuario != numeroAleatorio:
         for i in range(0, 4):
             if numeroUsuario[i] == numeroAleatorio[i]:  # comparo si es igual el primer digito con el digito del nro secreto y asi
                 aciertos += 1

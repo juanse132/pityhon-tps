@@ -1,6 +1,6 @@
 def area_circulo():
     """
-    Calculo el area de un circulo
+    Calculo el area de un circulo dado el radio 
     """
     pi = 3.14
     r = int(input("Ingrese el radio del circulo: "))

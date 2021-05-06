@@ -1,7 +1,7 @@
 from random import randrange
 import random
 
-x=(random.randrange(30)) # establezco un nro aleatorio entre 30 y 0
+x=(random.randrange(30))
 cont = 0
 numero = 0
 while numero != x:  # repito esto hasta que el numero sea igual al secreto

@@ -5,7 +5,8 @@ num4 = int(input("Ingrese el cuarto numero: "))
 
 def mayor_producto(num1, num2, num3, num4):    
     """
-    Saco el mayor producto de 4 numeros 
+    Saco el mayor producto de 4 numeros,considerando que se agarra de a pares y se 
+    se saca el mayor producto entre estos pares.
     """
     maximo = num3 * num4
     for i in (num2, num3, num4):  # Recorro hasta el num4 y comparo el producto con el maximo

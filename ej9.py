@@ -4,11 +4,12 @@ password_correcto = "password123"
 def password(password):
     """
     Establezco una contraseña inventada y la voy comparando con la que escribe el usuario 
+    y si es la correcta le devuelve un true y termina la funcion
     """
     import time
     cont = 3
     tiempo_espera = 1
-    while password != password_correcto:  # hago hasta que el password sea el correcto
+    while password != password_correcto:
         print("Escriba bien su password ")
         password = input("Ingrese otra vez el password: ")
         time.sleep(tiempo_espera)

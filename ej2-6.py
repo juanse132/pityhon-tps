@@ -1,6 +1,6 @@
 def volumen_esfera():
     """
-    Calculo el volumen de una esfera
+    Calculo el volumen de una esfera dado el radio
     """
     pi = 3.14
     r = int(input("ingrese el radio del circulo: "))

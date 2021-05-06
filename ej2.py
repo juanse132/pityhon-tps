@@ -1,9 +1,9 @@
 def perimetro_rectangulo():
     """
-    Calculo el perimetro de un rectangulo
+    Calculo el perimetro de un rectangulo dado la base y la altura
     """
-    h = int(input("Ingrese la altura: "))  # pido la altura del rectangulo
-    b = int(input("Ingrese la base: "))  # pido la base del rectangulo
+    h = int(input("Ingrese la altura: "))
+    b = int(input("Ingrese la base: ")) 
     p = h * 2 + b * 2  # calculo el perimetro
     return f"El perimetro del rectangulo dado es: {p}" 
 

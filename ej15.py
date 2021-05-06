@@ -1,9 +1,9 @@
 def mostrarSiglas(cadena):
     """
-    Devuelvo la primera letra en mayuscula de cada palabra de la cadena  
+    Devuelvo la primera letra en mayuscula de cada palabra de la cadena string
     """
     cadena_final = ""
-    palabras = cadena.split(" ")  # separo la cadena 
+    palabras = cadena.split(" ")
     lista_iniciales = []
     for palabra in palabras:  # recorro la palabra separada y saco la primera letra
         lista_iniciales.append(palabra[0])
@@ -33,7 +33,7 @@ def palabras_iniciales(cadena, letra):
     for i in palabras:
         if i[0] == letra.lower() or i[0] == letra.upper():  # comparo la primera letra con la letra si es mayuscula o minuscula
             palabras_iniciales += i + " "  # pongo las palabras acorde a la letra pre-seleccionada
-    if palabras_iniciales == " ":  # Y si no hay nada con la letra pre-elejida devuelvo que no hay letra en la cadena
+    if palabras_iniciales == " ":
         print("No hay:", letra, " en:", cadena)
 
     return palabras_iniciales

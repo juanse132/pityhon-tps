@@ -1,6 +1,6 @@
 def hipotenusa_triangulo():
     """
-    Calculo la hipotenusa de un triangulo
+    Calculo la hipotenusa de un triangulo dado los catetos 
     """
     c1 = int(input("Ingrese el cateto 1: "))
     c2 = int(input("Ingrese el cateto 2: "))

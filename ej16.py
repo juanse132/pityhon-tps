@@ -1,6 +1,6 @@
 def letras_consonantes():
     """
-    Devuelo las letras consonantes de una cadena 
+    Devuelo las letras consonantes de una cadena string ingresada por el usuario
     """
     cadena_consonante = str(input("Ingrese una cadena para devolver consonantes: "))
     cadena_final = " "
@@ -12,7 +12,7 @@ def letras_consonantes():
 
 def letras_vocales(cant_espacios):
     """
-    Devuelvo las vocales de una cadena 
+    Devuelvo las vocales de una cadena string ingresada por un usuario
     """
     cadena_vocal = str(input("Ingrese una cadena para devolver vocales:"))
     cadena_final = ""
@@ -29,7 +29,7 @@ print(letras_vocales(3))
 
 def reemplazar_vocales():
     """
-    Devuelo la siguiente vocal que haya en una cadena 
+    Devuelo la siguiente vocal que haya en una cadena string que haya ingresado el usuario
     """
     cadena_vocal = str(input("Ingrese una cadena para reemplazar vocales:"))
     cadena_final = ""
@@ -51,10 +51,10 @@ def reemplazar_vocales():
 
 def capicua():
     """
-    Devuelvo True si la cadena es palindromo 
+    Devuelvo True si la cadena string ingresada por el usuario es palindromo 
     """
     cadena_capicua = str(input("Ingrese una cadena para saber si es capicua o no:").lower())
-    cadena_capicua = cadena_capicua.replace(" ", "")  # saco los espacios entre la cadena
+    cadena_capicua = cadena_capicua.replace(" ", "") 
     if cadena_capicua == cadena_capicua[::-1]:  # si es igual de tanto como de izquierda a derecha como de derecha a izquierda
         return True
     else:

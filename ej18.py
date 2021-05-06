@@ -3,7 +3,7 @@ lista_inicial = frase_inicial.split(" ")
 
 def vuelta_listas(lista_inicial):
     """
-    Devuelvo una lista dada vuelta utilizando una lista auxiliar 
+    Devuelvo una lista string ingresada por el usuario pero dada vuelta utilizando una lista auxiliar 
     """
     lista_final = [""]
     for palabra  in lista_inicial[::-1]:  # recorro la lista de izquierda a derecha
@@ -16,7 +16,7 @@ print(vuelta_listas(lista_inicial))
 
 def lista_modificada(lista_inicial):
     """
-    Devuelvo una lista dada vuelta pero en una linea
+    Devuelvo una lista string ingresada por el usuario pero dada vuelta en una sola linea
     """
     lista_inicial = lista_inicial[4::-1]  # pongo en la lista inicial desde la posicion final de la misma hasta el inicio dando saltos de -1   
 
